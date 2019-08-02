@@ -1,0 +1,18 @@
+en:
+  welcome: "Welcome to Calculator! Enter your name:"
+  valid_name: "Make sure to enter a valid name."
+  first_number: "What's the first number?"
+  second_number: "What's the second number?"
+  valid_number_error: "Hmm... that doesn't look like a valid number."
+  operation_choice: "Must choose 1, 2, 3 or 4"
+  calculate_again: "Do you want to perform another calculation?(Y to calculate again)"
+  farewell_message: "Thank you for using the calculator!"
+jp:
+  welcome: "電卓機へようこそ。名前を入れて。"
+  valid_name: "有効な名前をご入力ください。"
+  first_number: "一つ目の数字は何でしょうか。"
+  second_number: "二つ目の数字は何でしょうか。"
+  valid_number_error: "あら、有効じゃなさそうですけど。。。"
+  operation_choice: "１、２、３、４から選択ください。"
+  calculate_again: "他の計算も行いますか？（実行するため`y`を押してください。）"
+  farewell_message: "電卓機をご利用いただきありがとうございました。"
