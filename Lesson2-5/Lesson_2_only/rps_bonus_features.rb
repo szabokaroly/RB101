@@ -30,16 +30,16 @@ POSITIVE_ANSWER = %w(y yes yeah sure)
 NEGATIVE_ANSWER = %w(n no nope negative)
 
 def prompt(message)
-  Kernel.puts "=> #{message}"
+  puts "=> #{message}"
 end
 
 def obtain_player_choice
   choice = ''
   loop do
     prompt(MAKE_YOUR_CHOICE)
-    choice = Kernel.gets().chomp().downcase
-    if VALID_CHOICES.include?(choice.intern)
-      return choice = VALID_CHOICES[choice.intern]
+    choice = gets.chomp.downcase
+    if VALID_CHOICES.include?(choice.to_sym)
+      return choice = VALID_CHOICES[choice.to_sym]
     else
       prompt("That's not a valid choice to make, try again.")
     end
@@ -76,7 +76,7 @@ def play_again?
   answer = ''
   loop do
     prompt("Do you wanna play again?")
-    answer = Kernel.gets().chomp().downcase
+    answer = gets.chomp.downcase
     if POSITIVE_ANSWER.include?(answer)
       return true
     elsif NEGATIVE_ANSWER.include?(answer)
@@ -85,6 +85,10 @@ def play_again?
       prompt("That is an invalid answer!")
     end
   end
+end
+
+def clear
+  system('clear') || system('cls')
 end
 
 prompt("Welcome to the magical rock-paper-scissors-lizard-spock game!")
@@ -121,6 +125,7 @@ loop do
   prompt("The grand champion is: #{game_winner(player_score, computer_score)}!")
 
   break unless play_again?
+  clear
 end
 
 prompt("Thank you for playing!")
